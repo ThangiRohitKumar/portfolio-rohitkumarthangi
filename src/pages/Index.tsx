@@ -58,6 +58,24 @@ const Index = () => {
         </p>
       </motion.section>
 
+      {/* Career Objective Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="container px-4 py-12 mx-auto"
+      >
+        <div className="max-w-3xl mx-auto p-8 rounded-lg bg-muted">
+          <h2 className="text-2xl font-bold mb-4 text-foreground text-center">Career Objective</h2>
+          <p className="text-gray-400 leading-relaxed text-center">
+            Dedicated data analyst with a strong foundation in business intelligence tools and statistical analysis. 
+            Seeking to leverage my expertise in data visualization and analytics to drive data-informed decision-making 
+            in a dynamic organization. Committed to continuous learning and staying current with emerging technologies 
+            in the field of data science and analytics.
+          </p>
+        </div>
+      </motion.section>
+
       {/* Skills Section */}
       <section className="container px-4 py-16 mx-auto">
         <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Technical Skills</h2>
