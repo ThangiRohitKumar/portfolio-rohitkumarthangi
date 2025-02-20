@@ -77,14 +77,21 @@ const Index = () => {
       </motion.section>
 
       {/* Skills Section */}
-      <section className="container px-4 py-16 mx-auto">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="container px-4 py-16 mx-auto"
+      >
         <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Technical Skills</h2>
         <div className="grid gap-8 md:grid-cols-2">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className="p-6 rounded-lg shadow-lg bg-muted"
             >
@@ -95,7 +102,8 @@ const Index = () => {
               <div className="w-full h-2 bg-background rounded-full">
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: `${skill.level}%` }}
+                  whileInView={{ width: `${skill.level}%` }}
+                  viewport={{ once: true }}
                   transition={{ duration: 1, delay: 0.5 }}
                   className="h-full bg-primary rounded-full"
                 />
@@ -103,17 +111,24 @@ const Index = () => {
             </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Projects Section */}
-      <section className="container px-4 py-16 mx-auto">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="container px-4 py-16 mx-auto"
+      >
         <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Featured Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               onMouseEnter={() => setIsHovered(project.title)}
               onMouseLeave={() => setIsHovered(null)}
@@ -134,10 +149,16 @@ const Index = () => {
             </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section className="container px-4 py-16 mx-auto">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="container px-4 py-16 mx-auto"
+      >
         <div className="max-w-xl p-8 mx-auto rounded-lg shadow-lg bg-muted">
           <h2 className="mb-6 text-3xl font-bold text-center text-foreground">Get in Touch</h2>
           <div className="space-y-4 text-center">
@@ -152,7 +173,7 @@ const Index = () => {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
