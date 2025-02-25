@@ -1,6 +1,5 @@
-
 import { motion } from "framer-motion";
-import { ChartBar, Database, Code2, Brain, BarChart, PieChart } from "lucide-react";
+import { ChartBar, Database, Code2, Brain, BarChart, PieChart, Award } from "lucide-react";
 import { useState } from "react";
 
 const Index = () => {
@@ -35,6 +34,21 @@ const Index = () => {
       title: "Executive KPI Dashboard",
       description: "Created Power BI dashboard for C-level executives, consolidating data from multiple sources for strategic planning",
       tags: ["Power BI", "DAX", "SQL"],
+    },
+  ];
+
+  const certifications = [
+    {
+      title: "Google Professional Data Engineer",
+      issuer: "Google Cloud",
+      date: "2024",
+      credential: "Credential ID: GCP-2024-DE-1234",
+    },
+    {
+      title: "Power BI Data Analyst Professional",
+      issuer: "Udemy",
+      date: "2023",
+      credential: "Credential ID: UDEMY-PBI-2023-5678",
     },
   ];
 
@@ -73,6 +87,39 @@ const Index = () => {
             in a dynamic organization. Committed to continuous learning and staying current with emerging technologies 
             in the field of data science and analytics.
           </p>
+        </div>
+      </motion.section>
+
+      {/* Certifications Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="container px-4 py-16 mx-auto"
+      >
+        <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Certifications</h2>
+        <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="p-6 rounded-lg shadow-lg bg-muted flex items-start gap-4"
+            >
+              <div className="text-primary">
+                <Award className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{cert.title}</h3>
+                <p className="text-gray-400 mb-1">Issuer: {cert.issuer}</p>
+                <p className="text-gray-400 mb-2">Issued: {cert.date}</p>
+                <p className="text-sm text-primary">{cert.credential}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.section>
 
