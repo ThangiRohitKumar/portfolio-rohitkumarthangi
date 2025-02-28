@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ChartBar, Database, Code2, Brain, BarChart, PieChart, Award } from "lucide-react";
 import { useState } from "react";
@@ -65,7 +66,7 @@ const Index = () => {
           Data Analyst
         </span>
         <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl text-foreground">
-          John Doe
+          Rohit Kumar Thangi
         </h1>
         <p className="max-w-lg mx-auto mt-4 text-lg text-gray-400">
           Transforming data into actionable insights with 1 year of hands-on experience in data analysis and visualization.
