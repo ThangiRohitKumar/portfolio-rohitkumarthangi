@@ -1,8 +1,9 @@
+
 import { motion } from "framer-motion";
 import { 
   ChartBar, Database, Code2, Brain, BarChart, PieChart, Award, 
   Shield, Lock, Codepen, Table, BookText, Briefcase, Laptop, 
-  Graduation, GraduationCap, MapPin, Phone, Mail, Linkedin, Github
+  GraduationCap, MapPin, Phone, Mail, Linkedin, Github
 } from "lucide-react";
 import { useState } from "react";
 
