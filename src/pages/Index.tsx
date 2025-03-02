@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-import { ChartBar, Database, Code2, Brain, BarChart, PieChart, Award, Shield, Lock, Codepen, Table, BookText } from "lucide-react";
+import { 
+  ChartBar, Database, Code2, Brain, BarChart, PieChart, Award, 
+  Shield, Lock, Codepen, Table, BookText, Briefcase, Laptop, 
+  Graduation, MapPin, Phone, Mail, Linkedin, Github
+} from "lucide-react";
 import { useState } from "react";
 
 const Index = () => {
@@ -64,6 +68,90 @@ const Index = () => {
     },
   ];
 
+  const experiences = [
+    {
+      company: "Tata Consultancy Services",
+      location: "Bangalore",
+      position: "Cybersecurity IAM Support Engineer",
+      duration: "Apr 2024 – June 2025",
+      responsibilities: [
+        "During the internship, I learned about the Channasattu machine.",
+        "Various components of the machine were described and a case study was prepared on the working of the machine."
+      ]
+    },
+    {
+      company: "Decision Minds",
+      location: "Bangalore",
+      position: "Data Visualization Student Intern",
+      duration: "July 2021 – Aug 2021",
+      responsibilities: [
+        "Collaborated with cross-functional teams to design and implement data visualization solutions that enhanced decision-making processes for clients in various industries. Utilized Tableau and Power BI tools to create interactive dashboards and reports, transforming complex datasets into clear, actionable insights.",
+        "Conducted data analysis to identify trends and patterns, providing recommendations that supported strategic initiatives and operational improvements.",
+        "Engaged in regular presentations to stakeholders, effectively communicating findings and visualizations to drive data-driven decision-making."
+      ]
+    }
+  ];
+
+  const personalProjects = [
+    {
+      title: "Linkedin Post Generator using Llama 3",
+      type: "Individual",
+      duration: "Jan 2025 – Feb 2025",
+      description: [
+        "Developed a LinkedIn Post Generator using Llama 3, Lang Chain, Stream lit, and Groq, enhancing content creation for influencers. Implemented data collection and preprocessing techniques to extract and enrich metadata from influencer posts.",
+        "Designed a user-friendly interface with Stream lit, allowing users to generate tailored LinkedIn posts based on selected topics, lengths, and languages. Integrated LLM capabilities for content generation, utilizing prompt engineering and few-shot learning to match influencer writing styles."
+      ],
+      tags: ["Llama 3", "Lang Chain", "Streamlit", "Groq"]
+    },
+    {
+      title: "E-commerce Sales Analysis Dashboard",
+      type: "Individual",
+      duration: "Jun 2022 - Sep 2022",
+      description: [
+        "Designed and developed a dynamic Excel dashboard to comprehensively analyze e-commerce sales data, utilizing advanced Excel functionalities and visualizations to enhance data-driven decision-making.",
+        "Implemented interactive features and user-friendly navigation within the dashboard, allowing users to explore key metrics such as sales performance, product trends, customer segmentation, and revenue projections with ease."
+      ],
+      tags: ["Excel", "Data Analysis", "Dashboard"]
+    },
+    {
+      title: "Human Resource Dashboard for an IT firm",
+      type: "Individual",
+      duration: "Jun 2021 – Jul 2021",
+      description: [
+        "Designed and developed a company HR dashboard utilizing Tableau to visualize key human resources metrics and KPIs. Implemented interactive features and drill-down functionality to provide deeper insights into employee performance, retention, and engagement.",
+        "Leveraged data blending techniques to integrate multiple data sources for comprehensive analysis. Presented findings to stakeholders to inform strategic HR decision-making and drive organizational effectiveness."
+      ],
+      tags: ["Tableau", "HR Analytics", "Dashboard"]
+    },
+    {
+      title: "Wi-Fi and Cloud-Based Home Automation System including Door lock",
+      type: "Individual",
+      duration: "Apr 2021 – May 2021",
+      description: [
+        "I developed a home automation system using NodeMCU which works over a cloud. It can be operated through mobile by using an application called Blynk.",
+        "The devices are connected through the internet and the cloud. Relay modules act as a switch and send the signal as ON and OFF to open or close the circuit."
+      ],
+      tags: ["NodeMCU", "IoT", "Home Automation", "Blynk"]
+    }
+  ];
+
+  const education = [
+    {
+      institution: "SRM University Andhra Pradesh",
+      degree: "Bachelor of Technology, Mechanical Engineering",
+      duration: "May 2019 - June 2023",
+      gpa: "8.49/10.0"
+    }
+  ];
+
+  const personalInfo = {
+    location: "Srikakulam, India",
+    phone: "+91 9298602702",
+    email: "rohitkumarthangi@gmail.com",
+    linkedin: "https://www.linkedin.com/in/rohit-kumar-5191381b1/",
+    github: "https://github.com/ThangiRohitKumar"
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <motion.section 
@@ -81,6 +169,29 @@ const Index = () => {
         <p className="max-w-lg mx-auto mt-4 text-lg text-gray-400">
           Transforming data into actionable insights with 1 year of hands-on experience in data analysis and visualization.
         </p>
+        
+        <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
+          <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
+            <Mail size={18} />
+            <span>{personalInfo.email}</span>
+          </a>
+          <a href={`tel:${personalInfo.phone}`} className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
+            <Phone size={18} />
+            <span>{personalInfo.phone}</span>
+          </a>
+          <div className="flex items-center gap-2 text-gray-400">
+            <MapPin size={18} />
+            <span>{personalInfo.location}</span>
+          </div>
+          <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
+            <Linkedin size={18} />
+            <span>LinkedIn</span>
+          </a>
+          <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
+            <Github size={18} />
+            <span>GitHub</span>
+          </a>
+        </div>
       </motion.section>
 
       <motion.section 
@@ -97,6 +208,81 @@ const Index = () => {
             in a dynamic organization. Committed to continuous learning and staying current with emerging technologies 
             in the field of data science and analytics.
           </p>
+        </div>
+      </motion.section>
+
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="container px-4 py-16 mx-auto"
+      >
+        <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Education</h2>
+        <div className="max-w-4xl mx-auto">
+          {education.map((edu, index) => (
+            <motion.div
+              key={edu.institution}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="p-6 rounded-lg shadow-lg bg-muted flex items-start gap-4 mb-8"
+            >
+              <div className="text-primary">
+                <Graduation className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{edu.institution}</h3>
+                <p className="text-gray-400 mb-1">{edu.degree}</p>
+                <p className="text-gray-400 mb-2">{edu.duration}</p>
+                <p className="text-sm text-primary">GPA: {edu.gpa}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="container px-4 py-16 mx-auto"
+      >
+        <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Work Experience</h2>
+        <div className="max-w-4xl mx-auto space-y-8">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={`${exp.company}-${exp.position}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="p-6 rounded-lg shadow-lg bg-muted"
+            >
+              <div className="flex items-start gap-4">
+                <div className="text-primary mt-1">
+                  <Briefcase className="w-8 h-8" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex justify-between flex-wrap">
+                    <h3 className="text-xl font-semibold text-foreground">{exp.position}</h3>
+                    <span className="text-sm text-primary">{exp.duration}</span>
+                  </div>
+                  <p className="text-gray-400 mb-4">{exp.company}, {exp.location}</p>
+                  <ul className="space-y-2">
+                    {exp.responsibilities.map((responsibility, idx) => (
+                      <li key={idx} className="text-gray-400 flex items-start">
+                        <span className="mr-2 mt-1 text-primary">•</span>
+                        <span>{responsibility}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.section>
 
@@ -289,9 +475,9 @@ const Index = () => {
         transition={{ duration: 0.8 }}
         className="container px-4 py-16 mx-auto"
       >
-        <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Featured Projects</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          {projects.map((project, index) => (
+        <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Projects</h2>
+        <div className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
+          {personalProjects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
@@ -302,9 +488,20 @@ const Index = () => {
               onMouseLeave={() => setIsHovered(null)}
               className="relative p-6 transition-all rounded-lg shadow-lg bg-muted hover:shadow-xl"
             >
-              <h3 className="mb-3 text-xl font-semibold text-foreground">{project.title}</h3>
-              <p className="mb-4 text-gray-400">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
+                <span className="text-sm text-primary px-2 py-1 bg-primary/10 rounded-full">{project.duration}</span>
+              </div>
+              <p className="text-gray-400 mb-1">Type: {project.type}</p>
+              <ul className="mb-4 space-y-2">
+                {project.description.map((desc, idx) => (
+                  <li key={idx} className="text-gray-400 flex items-start">
+                    <span className="mr-2 mt-1 text-primary">•</span>
+                    <span>{desc}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
@@ -333,7 +530,7 @@ const Index = () => {
               Looking for opportunities to leverage data for impactful business decisions.
             </p>
             <a
-              href="mailto:john.doe@example.com"
+              href={`mailto:${personalInfo.email}`}
               className="inline-block px-6 py-3 text-white transition-colors rounded-lg bg-primary hover:bg-secondary"
             >
               Contact Me
