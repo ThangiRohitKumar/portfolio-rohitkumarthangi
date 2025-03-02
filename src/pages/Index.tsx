@@ -111,16 +111,6 @@ const Index = () => {
         "Leveraged data blending techniques to integrate multiple data sources for comprehensive analysis. Presented findings to stakeholders to inform strategic HR decision-making and drive organizational effectiveness."
       ],
       tags: ["Tableau", "HR Analytics", "Dashboard"]
-    },
-    {
-      title: "Wi-Fi and Cloud-Based Home Automation System including Door lock",
-      type: "Individual",
-      duration: "Apr 2021 – May 2021",
-      description: [
-        "I developed a home automation system using NodeMCU which works over a cloud. It can be operated through mobile by using an application called Blynk.",
-        "The devices are connected through the internet and the cloud. Relay modules act as a switch and send the signal as ON and OFF to open or close the circuit."
-      ],
-      tags: ["NodeMCU", "IoT", "Home Automation", "Blynk"]
     }
   ];
 
