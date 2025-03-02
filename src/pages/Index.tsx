@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { 
   ChartBar, Database, Code2, Brain, BarChart, PieChart, Award, 
@@ -33,58 +32,47 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Sales Analytics Dashboard",
-      description: "Developed an interactive dashboard tracking KPIs and sales metrics using Tableau, resulting in 25% faster decision-making",
-      tags: ["Tableau", "SQL", "Excel"],
+      title: "Linkedin Post Generator using Llama 3",
+      description: "Developed a LinkedIn Post Generator using Llama 3, Lang Chain, Stream lit, and Groq, enhancing content creation for influencers.",
+      tags: ["Llama 3", "Lang Chain", "Streamlit", "Groq"],
     },
     {
-      title: "Customer Segmentation",
-      description: "Implemented clustering algorithms to identify customer segments, leading to 20% increase in marketing ROI",
-      tags: ["Python", "Scikit-learn", "Pandas"],
+      title: "E-commerce Sales Analysis Dashboard",
+      description: "Designed and developed a dynamic Excel dashboard to comprehensively analyze e-commerce sales data, utilizing advanced Excel functionalities.",
+      tags: ["Excel", "Data Analysis", "Dashboard"],
     },
     {
-      title: "Inventory Optimization",
-      description: "Reduced stockout rates by 15% through predictive analytics and automated reporting",
-      tags: ["SQL", "Python", "Excel"],
-    },
-    {
-      title: "Executive KPI Dashboard",
-      description: "Created Power BI dashboard for C-level executives, consolidating data from multiple sources for strategic planning",
-      tags: ["Power BI", "DAX", "SQL"],
+      title: "Human Resource Dashboard for an IT firm",
+      description: "Designed and developed a company HR dashboard utilizing Tableau to visualize key human resources metrics and KPIs.",
+      tags: ["Tableau", "HR Analytics", "Dashboard"],
     },
   ];
 
   const certifications = [
     {
-      title: "Google Professional Data Engineer",
-      issuer: "Google Cloud",
-      date: "2024",
-      credential: "Credential ID: GCP-2024-DE-1234",
-    },
-    {
-      title: "Power BI Data Analyst Professional",
+      title: "Power BI - Business Intelligence for Beginners to Advanced",
       issuer: "Udemy",
       date: "2023",
       credential: "Credential ID: UDEMY-PBI-2023-5678",
-    },
+    }
   ];
 
   const experiences = [
     {
       company: "Tata Consultancy Services",
       location: "Bangalore",
-      position: "Cybersecurity IAM Support Engineer",
+      position: "Cybersecurity IAM Support Executive",
       duration: "Apr 2024 – June 2025",
       responsibilities: [
-        "During the internship, I learned about the Channasattu machine.",
-        "Various components of the machine were described and a case study was prepared on the working of the machine."
+        "Managed Identity Management (IDM) and Security Provisioning (SP) for global banks, ensuring secure and efficient access control. Resolved access-related incidents through ServiceNow while monitoring LDAP servers to maintain system integrity.",
+        "Handled provisioning and deprovisioning of user access for critical banking applications (CitiDirect, HSBCnet). Ensured compliance with security policies and minimized risks associated with unauthorized access. Collaborated with cross-functional teams to improve identity governance processes and optimize operational security."
       ]
     },
     {
       company: "Decision Minds",
       location: "Bangalore",
       position: "Data Visualization Student Intern",
-      duration: "July 2021 – Aug 2021",
+      duration: "Aug 2024 – Nov 2024",
       responsibilities: [
         "Collaborated with cross-functional teams to design and implement data visualization solutions that enhanced decision-making processes for clients in various industries. Utilized Tableau and Power BI tools to create interactive dashboards and reports, transforming complex datasets into clear, actionable insights.",
         "Conducted data analysis to identify trends and patterns, providing recommendations that supported strategic initiatives and operational improvements.",
@@ -146,7 +134,7 @@ const Index = () => {
   ];
 
   const personalInfo = {
-    location: "Srikakulam, India",
+    location: "Bangalore, India",
     phone: "+91 9298602702",
     email: "rohitkumarthangi@gmail.com",
     linkedin: "https://www.linkedin.com/in/rohit-kumar-5191381b1/",
@@ -168,7 +156,7 @@ const Index = () => {
           Rohit Kumar Thangi
         </h1>
         <p className="max-w-lg mx-auto mt-4 text-lg text-gray-400">
-          Transforming data into actionable insights with 1 year of hands-on experience in data analysis and visualization.
+          Transforming data into actionable insights with experience in data analysis, visualization, and cybersecurity.
         </p>
         
         <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
@@ -295,7 +283,7 @@ const Index = () => {
         className="container px-4 py-16 mx-auto"
       >
         <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Certifications</h2>
-        <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+        <div className="grid gap-8 md:grid-cols-1 max-w-4xl mx-auto">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.title}
@@ -312,7 +300,7 @@ const Index = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-2">{cert.title}</h3>
                 <p className="text-gray-400 mb-1">Issuer: {cert.issuer}</p>
                 <p className="text-gray-400 mb-2">Issued: {cert.date}</p>
-                <p className="text-sm text-primary">{cert.credential}</p>
+                {cert.credential && <p className="text-sm text-primary">{cert.credential}</p>}
               </div>
             </motion.div>
           ))}
@@ -491,7 +479,7 @@ const Index = () => {
             >
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
-                <span className="text-sm text-primary px-2 py-1 bg-primary/10 rounded-full">{project.duration}</span>
+                {project.duration && <span className="text-sm text-primary px-2 py-1 bg-primary/10 rounded-full">{project.duration}</span>}
               </div>
               <p className="text-gray-400 mb-1">Type: {project.type}</p>
               <ul className="mb-4 space-y-2">
