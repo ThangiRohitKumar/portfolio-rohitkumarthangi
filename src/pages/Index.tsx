@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { 
   ChartBar, Database, Code2, Brain, BarChart, PieChart, Award, 
   Shield, Lock, Codepen, Table, BookText, Briefcase, Laptop, 
-  Graduation, MapPin, Phone, Mail, Linkedin, Github
+  Graduation, GraduationCap, MapPin, Phone, Mail, Linkedin, Github
 } from "lucide-react";
 import { useState } from "react";
 
@@ -230,7 +230,7 @@ const Index = () => {
               className="p-6 rounded-lg shadow-lg bg-muted flex items-start gap-4 mb-8"
             >
               <div className="text-primary">
-                <Graduation className="w-8 h-8" />
+                <GraduationCap className="w-8 h-8" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{edu.institution}</h3>
