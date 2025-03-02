@@ -1,18 +1,29 @@
-
 import { motion } from "framer-motion";
-import { ChartBar, Database, Code2, Brain, BarChart, PieChart, Award } from "lucide-react";
+import { ChartBar, Database, Code2, Brain, BarChart, PieChart, Award, Shield, Lock, Codepen, Table, BookText } from "lucide-react";
 import { useState } from "react";
 
 const Index = () => {
   const [isHovered, setIsHovered] = useState<string | null>(null);
 
   const skills = [
+    { name: "Python", level: 75, icon: <Code2 className="w-6 h-6" /> },
     { name: "SQL", level: 85, icon: <Database className="w-6 h-6" /> },
     { name: "Tableau", level: 90, icon: <BarChart className="w-6 h-6" /> },
     { name: "Power BI", level: 85, icon: <PieChart className="w-6 h-6" /> },
-    { name: "Data Visualization", level: 80, icon: <ChartBar className="w-6 h-6" /> },
-    { name: "Python", level: 75, icon: <Code2 className="w-6 h-6" /> },
-    { name: "Machine Learning", level: 70, icon: <Brain className="w-6 h-6" /> },
+    { name: "Excel", level: 80, icon: <Table className="w-6 h-6" /> },
+    { name: "Grafana", level: 75, icon: <ChartBar className="w-6 h-6" /> },
+    { name: "Pandas", level: 80, icon: <BookText className="w-6 h-6" /> },
+    { name: "NumPy", level: 75, icon: <Code2 className="w-6 h-6" /> },
+    { name: "Matplotlib", level: 70, icon: <ChartBar className="w-6 h-6" /> },
+    { name: "scikit-learn", level: 70, icon: <Brain className="w-6 h-6" /> },
+    { name: "Llama 3", level: 75, icon: <Brain className="w-6 h-6" /> },
+    { name: "Lang Chain", level: 70, icon: <Brain className="w-6 h-6" /> },
+    { name: "Streamlit", level: 80, icon: <Codepen className="w-6 h-6" /> },
+    { name: "Groq", level: 70, icon: <Brain className="w-6 h-6" /> },
+    { name: "Active Directory", level: 75, icon: <Shield className="w-6 h-6" /> },
+    { name: "LDAP", level: 70, icon: <Lock className="w-6 h-6" /> },
+    { name: "ServiceNow", level: 75, icon: <Shield className="w-6 h-6" /> },
+    { name: "IAM", level: 80, icon: <Lock className="w-6 h-6" /> },
   ];
 
   const projects = [
@@ -55,7 +66,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -73,7 +83,6 @@ const Index = () => {
         </p>
       </motion.section>
 
-      {/* Career Objective Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -91,7 +100,6 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Certifications Section */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -124,7 +132,6 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Skills Section */}
       <motion.section 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -133,8 +140,122 @@ const Index = () => {
         className="container px-4 py-16 mx-auto"
       >
         <h2 className="mb-12 text-3xl font-bold text-center text-foreground">Technical Skills</h2>
+        
+        <h3 className="mb-6 text-2xl font-semibold text-center text-foreground">Programming Languages</h3>
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
+          {skills.slice(0, 2).map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="p-6 rounded-lg shadow-lg bg-muted"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-primary">{skill.icon}</div>
+                <h3 className="text-xl font-semibold text-foreground">{skill.name}</h3>
+              </div>
+              <div className="w-full h-2 bg-background rounded-full">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${skill.level}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="h-full bg-primary rounded-full"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        <h3 className="mb-6 text-2xl font-semibold text-center text-foreground">Data Visualization Tools</h3>
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
+          {skills.slice(2, 6).map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="p-6 rounded-lg shadow-lg bg-muted"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-primary">{skill.icon}</div>
+                <h3 className="text-xl font-semibold text-foreground">{skill.name}</h3>
+              </div>
+              <div className="w-full h-2 bg-background rounded-full">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${skill.level}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="h-full bg-primary rounded-full"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        <h3 className="mb-6 text-2xl font-semibold text-center text-foreground">Data Analysis Libraries</h3>
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
+          {skills.slice(6, 10).map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="p-6 rounded-lg shadow-lg bg-muted"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-primary">{skill.icon}</div>
+                <h3 className="text-xl font-semibold text-foreground">{skill.name}</h3>
+              </div>
+              <div className="w-full h-2 bg-background rounded-full">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${skill.level}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="h-full bg-primary rounded-full"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        <h3 className="mb-6 text-2xl font-semibold text-center text-foreground">Generative AI Tools</h3>
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
+          {skills.slice(10, 14).map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="p-6 rounded-lg shadow-lg bg-muted"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-primary">{skill.icon}</div>
+                <h3 className="text-xl font-semibold text-foreground">{skill.name}</h3>
+              </div>
+              <div className="w-full h-2 bg-background rounded-full">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${skill.level}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="h-full bg-primary rounded-full"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        <h3 className="mb-6 text-2xl font-semibold text-center text-foreground">Cybersecurity Tools</h3>
         <div className="grid gap-8 md:grid-cols-2">
-          {skills.map((skill, index) => (
+          {skills.slice(14, 18).map((skill, index) => (
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, x: -20 }}
@@ -161,7 +282,6 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Projects Section */}
       <motion.section 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -199,7 +319,6 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Contact Section */}
       <motion.section 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
