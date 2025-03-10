@@ -62,10 +62,13 @@ const Index = () => {
       company: "Tata Consultancy Services",
       location: "Bangalore",
       position: "Cybersecurity IAM Support Executive",
-      duration: "Apr 2024 – June 2025",
+      duration: "Apr 2024 – Present",
       responsibilities: [
-        "Managed Identity Management (IDM) and Security Provisioning (SP) for global banks, ensuring secure and efficient access control. Resolved access-related incidents through ServiceNow while monitoring LDAP servers to maintain system integrity.",
-        "Handled provisioning and deprovisioning of user access for critical banking applications (CitiDirect, HSBCnet). Ensured compliance with security policies and minimized risks associated with unauthorized access. Collaborated with cross-functional teams to improve identity governance processes and optimize operational security."
+        "Extracted and analysed service metrics from ServiceNow to monitor SLA compliance, generating comprehensive performance reports that reduced incident resolution times by 15%",
+        "Designed and implemented interactive Excel dashboards with pivot tables and advanced visualizations to track ticket trends, identify recurring issues, and support data-driven decision-making.",
+        "Created and delivered weekly and monthly stakeholder reports highlighting key performance indicators, resolution metrics, and emerging patterns in support cases.",
+        "Developed SQL queries to extract and validate user access data, ensuring accuracy of compliance reporting and identifying potential security risks",
+        "Collaborated with cross-functional teams to translate complex security metrics into actionable insights, enabling process optimizations that enhanced operational efficiency"
       ]
     }
   ];
