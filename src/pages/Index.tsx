@@ -67,17 +67,6 @@ const Index = () => {
         "Managed Identity Management (IDM) and Security Provisioning (SP) for global banks, ensuring secure and efficient access control. Resolved access-related incidents through ServiceNow while monitoring LDAP servers to maintain system integrity.",
         "Handled provisioning and deprovisioning of user access for critical banking applications (CitiDirect, HSBCnet). Ensured compliance with security policies and minimized risks associated with unauthorized access. Collaborated with cross-functional teams to improve identity governance processes and optimize operational security."
       ]
-    },
-    {
-      company: "Decision Minds",
-      location: "Bangalore",
-      position: "Data Visualization Student Intern",
-      duration: "Aug 2024 – Nov 2024",
-      responsibilities: [
-        "Collaborated with cross-functional teams to design and implement data visualization solutions that enhanced decision-making processes for clients in various industries. Utilized Tableau and Power BI tools to create interactive dashboards and reports, transforming complex datasets into clear, actionable insights.",
-        "Conducted data analysis to identify trends and patterns, providing recommendations that supported strategic initiatives and operational improvements.",
-        "Engaged in regular presentations to stakeholders, effectively communicating findings and visualizations to drive data-driven decision-making."
-      ]
     }
   ];
 
